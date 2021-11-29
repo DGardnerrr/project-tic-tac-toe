@@ -12,6 +12,7 @@ If both players are not able to get their "X" or "O" in a row, then they both lo
 
 
 user stories:
+
 1. As a player, I can play a game of tic tac toe with the other player
 
 2. As a player, 
@@ -21,7 +22,7 @@ In order to give the player 1 a challenge player 2 will need to randomly choose 
 
 In order to give the player 2 a challenge player 1 will need to randomly choose a move to play
 
-4. 
+4. As a player,
 
 5. As a player uncertain of the rules I want to be told who won and why so that I know whether I was successful in the game 
 

@@ -1,0 +1,25 @@
+body {
+    font-family:'Poiret One', sans-serif;
+    background: white;
+       color: black;
+   }
+   
+   button {
+     width: 20%;
+     height: 10%;
+     line-height: 50px;
+   }
+   
+   .cell {
+	width: var(--cell-size);
+	height: var(--cell-size);
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+
+   
+   
