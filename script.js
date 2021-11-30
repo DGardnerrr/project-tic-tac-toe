@@ -3,7 +3,7 @@
 //for clarification: whoever choose to play as cirle, the computer will generate that person as player B
 //purpose: create variables for players so computer can differentiate between the 2 players
 //purpose: variable "winOutcomes" used to store possible winning outcomes 
-//variable "winOutcomes" will make it more simple for compuuter to determine who  will  win
+//variable "winOutcomes" will make it more simple for computer to determine who  will  win
 
 const playerA = 'x';
 const playerB= 'circle';
@@ -22,75 +22,63 @@ const winOutcomes = [
 //set up DOM
 //this will play a important role with event listeners 
 //purpose of this: use id tags from index html & save values of all game elements
-//created a variable &  set player B to false - this will play a major role later on
-const cellElements = document.querySelectorAll('[data-cell]')
-const boardElement = document.getElementById('grid')
-const winningMessageElement = document.getElementById('winMessage')
-const restartButton = document.getElementById('restartButton')
-const winningMessageTextElement = document.getElementById('winningMessageText')
+const cellElements = document.querySelectorAll(".data-cell")
+const paragraph = document.getElementsByClassName("box cell");
+const boardElement = document.getElementById(".grid")
+const winningMessageElement = document.getElementById(".winMessage")
+const startButton = document.getElementsByClassName(".startGame")
+const winningMessageTextElement = document.getElementById(".winningMessageText")
 
-let playerB = false;
+//part - create function and event listeners - innerHTML,
+//when player clicks on the cell, either a X or O should pop up
+	// Create an event when a box is clicked
+	window.onload = function() {
+
+		// Instantiate board
+		const paragraph = document.getElementsByClassName(".box cell");
+		for (var i = 0; i < paragraph.length; i++) {
+			paragraph[i].onclick = function() {
+				this.innerHTML = (this.innerHTML === 'X')? 'O' : 'X';
+			}
+		}	
+		// A function to render the board
+		const renderBoard = function() {
+			for (var i = 0; i < paragraph.length; i++) {
+				this.innerHTML = 'X';
+			}
+		}
 
 
-// function that enables game to switch between the 2 players
-// function that marks 2 players in cell or place mark when playing game -
-function swapTurns() {
-	playerBTurn != playerBTurn
-  }
-  
-  function markPlace(cell, currentTurn) {
-    cell.classlist.add(currentTurn)
-  }
 
 
 //part - created function & event listeners for clicking on each cell/square
 //function "handleClick" was created with a parameter of "event"  to handle mouse click events - this will allow function to be executed
-//variable "currentTurn" determines who turn it currently is between player 1 and 2 
-/*if statement checks if one of players has already won by comparing win combinations 
-*
-*
-* 
-* "currentTurns" - determines which player turn it currently is
-*/ 
-function handleCellClick(event) {
-	const cell = event.target
-	const currentTurn = playerBTurn ? playerB : playerA
-	markPlace(cell, currentTurn)
-	if (winCheck(currentTurn)) {
-		endGame(false)
-	} else if (isDraw()) {
-		endGame(true)
-	} else {
-		swapTurns()
-		setBoardHoverClass()
+	function handleClickEvent(){
+		alert("You clicked a cell!");
 	}
-
-
-//part - functions & event listeners
+	//add target to button
+	const alertCell = document.querySelectorAll(".data-cell");
+	
+	//add event listener
+	alertCell.forEach(function(currentCell){
+		currentCell.addEventListener('click', handleClickEvent)
+	})
+	
+	
+//part - functions & event listeners for begin game
 //purpose: set a call of function to begin the game & add event listeners make interactive for each button
 //created function called "beginGame" for starting game, everytime a player wants to  restart the game, the game will restart
 //created function called "beginGame" for starting game, everytime a player wants to  restart the game, the game will restart 
-//player has to click "restart game  button" inorder to start game then they click whether  they want to play as x or o?
-// "playerBTurn =  false" ensures that player A will be the first to play
-//For each cell, 
-beginGame()
+//player has to click "begin game button" inorder to start game then they click whether  they want to play as x or o?
+function handleClickEvent() {
+	alert("You began the game!");
+}
+//add target to button
+const alertBegin = document.querySelectorAll(".startGame");
 
-restartButton.addEventListener('click', beginGame)
-
-function beginGame() {
-	  playerBTurn = false
-	cellElements.forEach(cell => {
-		cell.classList.remove(playerA)
-		cell.classList.remove(playerB)
-		cell.removeEventListener('click', handleCellClick)
-		cell.addEventListener('click', handleCellClick, { once: true })
-	})
-	setBoardHoverClass()
-	winningMessageElement.classList.remove('show')
+//add event listener
+alertBegin.addEventListener('click', handleClickEvent);
 }
 
-	
-	
-//part -
-//function shows who won the game or if there is a tie - shows the 
-// results from  the game 
+
+  
