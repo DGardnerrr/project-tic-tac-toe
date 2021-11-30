@@ -1,6 +1,10 @@
-//create variables
+//part - create variables to store information 
+//for clarification: whoever choose to play as X, the computer will generate that person as player A
+//for clarification: whoever choose to play as cirle, the computer will generate that person as player B
 //purpose: create variables for players so computer can differentiate between the 2 players
 //purpose: variable "winOutcomes" used to store possible winning outcomes 
+//variable "winOutcomes" will make it more simple for compuuter to determine who  will  win
+
 const playerA = 'x';
 const playerB= 'circle';
 const winOutcomes = [
@@ -14,23 +18,24 @@ const winOutcomes = [
 	[2, 4, 6]
 ]
 
-//set up dom nodes
+//part 
+//set up DOM
+//this will play a important role with event listeners 
 //purpose of this: use id tags from index html & save values of all game elements
-//created a variable &  set player C to false- ensure other player B can make a move first
+//created a variable &  set player B to false - this will play a major role later on
 const cellElements = document.querySelectorAll('[data-cell]')
 const boardElement = document.getElementById('grid')
 const winningMessageElement = document.getElementById('winMessage')
 const restartButton = document.getElementById('restartButton')
 const winningMessageTextElement = document.getElementById('winningMessageText')
 
-let playerB = false
-
+let playerB = false;
 
 
 // function that enables game to switch between the 2 players
 // function that marks 2 players in cell or place mark when playing game -
 function swapTurns() {
-    playerBturn != playerAturn
+	playerBTurn != playerBTurn
   }
   
   function markPlace(cell, currentTurn) {
@@ -42,24 +47,47 @@ function swapTurns() {
 //function "handleClick" was created with a parameter of "event"  to handle mouse click events - this will allow function to be executed
 //variable "currentTurn" determines who turn it currently is between player 1 and 2 
 /*if statement checks if one of players has already won by comparing win combinations 
-* if current move/turn the player makes, 
+*
 *
 * 
-* "currentTurns" - determines which player turn it currently is?
+* "currentTurns" - determines which player turn it currently is
 */ 
-
-
-
-
-
-
+function handleCellClick(event) {
+	const cell = event.target
+	const currentTurn = playerBTurn ? playerB : playerA
+	markPlace(cell, currentTurn)
+	if (winCheck(currentTurn)) {
+		endGame(false)
+	} else if (isDraw()) {
+		endGame(true)
+	} else {
+		swapTurns()
+		setBoardHoverClass()
+	}
 
 
 //part - functions & event listeners
 //purpose: set a call of function to begin the game & add event listeners make interactive for each button
 //created function called "beginGame" for starting game, everytime a player wants to  restart the game, the game will restart
 //created function called "beginGame" for starting game, everytime a player wants to  restart the game, the game will restart 
-//player has to click "restart" inorder to start game then they click whether  they want to play as x or o?
+//player has to click "restart game  button" inorder to start game then they click whether  they want to play as x or o?
+// "playerBTurn =  false" ensures that player A will be the first to play
+//For each cell, 
+beginGame()
+
+restartButton.addEventListener('click', beginGame)
+
+function beginGame() {
+	  playerBTurn = false
+	cellElements.forEach(cell => {
+		cell.classList.remove(playerA)
+		cell.classList.remove(playerB)
+		cell.removeEventListener('click', handleCellClick)
+		cell.addEventListener('click', handleCellClick, { once: true })
+	})
+	setBoardHoverClass()
+	winningMessageElement.classList.remove('show')
+}
 
 	
 	

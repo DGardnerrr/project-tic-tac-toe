@@ -42,6 +42,7 @@ body {
   font-size: 20;
 }
  
+
  .grid {
     display: grid;
     grid-template-columns: 4fr 4fr 4fr;
@@ -65,4 +66,9 @@ body {
 }
  
   
+=======
+ 
+ 
+   
+>>>>>>> a1a99c12122e54a2adc84efa3eb188104da54439
    
