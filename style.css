@@ -18,8 +18,51 @@ body {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	cursor: pointer;
 }
 
-   
+.grid {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+    
+  .cell:nth-of-type(even)
+{
+  background-color: white;
+}
+
+.cell:hover
+{
+  font-size: 2rem;
+
+}
+.cell.filled
+{
+  font-size: 20;
+}
+ 
+ .grid {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+    
+  .cell:nth-of-type(even)
+{
+  background-color: white;
+}
+
+.cell:hover
+{
+  font-size: 2rem;
+
+}
+.cell.filled
+{
+  font-size: 20;
+}
+ 
+  
    

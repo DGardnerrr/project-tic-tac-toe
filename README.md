@@ -18,11 +18,11 @@ user stories:
 2. As a player, 
 
 3. //Switching turns between X and O: 
-In order to give the player 1 a challenge player 2 will need to randomly choose a move to play
+In order to give the player 1 a challenge player 2 will need to choose a move to play
 
-In order to give the player 2 a challenge player 1 will need to randomly choose a move to play
+In order to give the player 2 a challenge player 1 will need to choose a move to play
 
-4. As a player,
+4. As a player, I need to restart the game inorder to play again
 
 5. As a player uncertain of the rules I want to be told who won and why so that I know whether I was successful in the game 
 
