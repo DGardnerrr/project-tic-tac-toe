@@ -29,31 +29,27 @@ const winningMessageElement = document.getElementById(".winMessage")
 const startButton = document.getElementsByClassName(".startGame")
 const winningMessageTextElement = document.getElementById(".winningMessageText")
 
-//part - create function and event listeners - innerHTML,
-//when player clicks on the cell, either a X or O should pop up
-	// Create an event when a box is clicked
-	//window.onload = function() {
 
-		// Instantiate board
-		//const paragraph = document.getElementsByClassName(".box cell");
-		//for (var i = 0; i < paragraph.length; i++) {
-		//	paragraph[i].onclick = function() {
-			//	this.innerHTML = (this.innerHTML === 'X')? 'O' : 'X';
-			}
-		}	
-		// A function to render the board
-		//const renderBoard = function() {
-			//for (var i = 0; i < paragraph.length; i++) {
-			//	this.innerHTML = 'X';
-		//	}
-	//	}
-const chang
+//part 1 - functions & event listeners for begin game
+//purpose: set a call of function to begin the game & add event listeners make interactive for each button
+//created function called "beginGame" for starting game, everytime a player wants to  restart the game, the game will restart
+//created function called "beginGame" for starting game, everytime a player wants to  restart the game, the game will restart 
+//player has to click "begin game button" inorder to start game then they click whether  they want to play as x or o?
+function handleClickEvent() {
+	alert("You began the game!");
+}
+const alertBegin = document.querySelectorAll(".startGame");
+alertBegin.addEventListener('click', handleClickEvent);
+};
+
+
+//part 2 - when player clicks on the cell, either a X or O should pop up
+//create function and event listeners - innerHTML
+const changeToX = 
 
 
 
-
-
-//part - created function & event listeners for clicking on each cell/square
+//part 3 - created function & event listeners for clicking on each cell/square
 //function "handleClick" was created with a parameter of "event"  to handle mouse click events - this will allow function to be executed
 	function handleClickEvent(){
 		alert("You clicked a cell!");
@@ -65,23 +61,7 @@ const chang
 	alertCell.forEach(function(currentCell){
 		currentCell.addEventListener('click', handleClickEvent)
 	})
-	
-	
-//part - functions & event listeners for begin game
-//purpose: set a call of function to begin the game & add event listeners make interactive for each button
-//created function called "beginGame" for starting game, everytime a player wants to  restart the game, the game will restart
-//created function called "beginGame" for starting game, everytime a player wants to  restart the game, the game will restart 
-//player has to click "begin game button" inorder to start game then they click whether  they want to play as x or o?
-function handleClickEvent() {
-	alert("You began the game!");
-}
-//add target to button
-const alertBegin = document.querySelectorAll(".startGame");
-
-//add event listener
-alertBegin.addEventListener('click', handleClickEvent);
-}
 
 
+    //part 4 - code determines who won game
 
-  
