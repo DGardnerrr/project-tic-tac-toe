@@ -50,7 +50,8 @@ alertCell.addEventListener('click', event => {
    alert("You clicked a button!")
 })
 for (let i = 0; i < alertCell.length; i++) {
-	
+console.log(i);
+}
 
 // switch turns between 2 players
 
@@ -61,5 +62,5 @@ for (let i = 0; i < alertCell.length; i++) {
 // Create a function that checks if either player has won
 
 function pickWinner() {
-
+log("")
 }
