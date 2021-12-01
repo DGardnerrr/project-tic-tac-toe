@@ -15,13 +15,13 @@ user stories:
 
 1. As a player, I can play a game of tic tac toe with the other player
 
-2. As a player, I should be able to start the game by clicking start game
+2. As a player, I should be able to start the game by clicking begin  game
 
 3. Switching turns between X and O for player A: 
-In order to give the player 1 a challenge player 2 will need to choose a move to play
+In order to give the player 1 a challenge, player 2 will need to choose a move to play
 
 4.  Switching turns between X and O for player B: 
-In order to give the player 2 a challenge player 1 will need to choose a move to play
+In order to give the player 2 a challenge, player 1 will need to choose a move to play
 
 
 5. As a player uncertain of the rules I want to be told who won and why so that I know whether I was successful in the game 

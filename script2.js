@@ -22,46 +22,44 @@ const winOutcomes = [
 //set up DOM
 //this will play a important role with event listeners 
 //purpose of this: use id tags from index html & save values of all game elements
-const cellElements = document.querySelectorAll(".data-cell")
-const paragraph = document.getElementsByClassName("box cell");
-const boardElement = document.getElementById(".grid")
+const paragraph = document.getElementsByClassName(".box cell");
 const winningMessageElement = document.getElementById(".winMessage")
-const startButton = document.getElementsByClassName(".startGame")
+const startButton = document.getElementById(".beginGame")
 const winningMessageTextElement = document.getElementById(".winningMessageText")
 
 
-//part 1 - functions & event listeners for begin game
-//purpose: set a call of function to begin the game & add event listeners make interactive for each button
-//created function called "beginGame" for starting game, everytime a player wants to  restart the game, the game will restart
-//created function called "beginGame" for starting game, everytime a player wants to  restart the game, the game will restart 
-//player has to click "begin game button" inorder to start game then they click whether  they want to play as x or o?
-function handleClickEvent() {
-	alert("You began the game!");
-}
-const alertBegin = document.querySelectorAll(".startGame");
-alertBegin.addEventListener('click', handleClickEvent);
+//function that allows player to start game 
+function startGame(name) {
+    console.log("Hello you started the game" + name);
 };
 
+//added event listener for "begin game button"
+const beginGame = document.getElementById(".beginGame")
+beginGame.addEventListener("click", event => {
+  alert("The game has started!")
+})
 
-//part 2 - when player clicks on the cell, either a X or O should pop up
-//create function and event listeners - innerHTML
-const changeToX = 
 
-
-
-//part 3 - created function & event listeners for clicking on each cell/square
-//function "handleClick" was created with a parameter of "event"  to handle mouse click events - this will allow function to be executed
-	function handleClickEvent(){
-		alert("You clicked a cell!");
-	}
-	//add target to button
-	const alertCell = document.querySelectorAll(".data-cell");
+//when player clicks on the cell, either a X or O should pop up
+//add target to button
+//for loop - loop over all of data cells - 
+//add event listeners, so when you click a box
+//event listener for box
+const alertCell = document.getElementsByClassName(".box cell")
+alertCell.addEventListener('click', event => {
+   alert("You clicked a button!")
+})
+for (let i = 0; i < alertCell.length; i++) {
 	
-	//add event listener
-	alertCell.forEach(function(currentCell){
-		currentCell.addEventListener('click', handleClickEvent)
-	})
+
+// switch turns between 2 players
 
 
-    //part 4 - code determines who won game
 
+
+// code determines who won game
+// Create a function that checks if either player has won
+
+function pickWinner() {
+
+}
