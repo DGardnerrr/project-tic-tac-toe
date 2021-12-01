@@ -11,22 +11,37 @@ let currentPlayer = 'o';
 
 const board = new Array(9).fill(null);
 
-const boxClicked = (e) {
+const boxClicked = (e) => {
 	const id = e.target.id
 }
 
 if (!board[id]) {
 	board[id] = currentPlayer;
 	e.target.innerText = currentPlayer;
-    checkline();
+    if (checkline(()) endGame());
+	if(!board.some(e) => e === null)) endGame("draw"); //checks whether we have any null values
+
 currentPlayer = currentPlayer === O ? X : O
 }
 
 console.log(board);
 };
 
+//determines who won the game 
+const endGame = (result) => {
+intro.innerText = result == "draw" ? "Draw!" : currentPlayer + "has won!";
+boxes.forEach((box) => box.removeEventListener("click", boxClicked))
+	console.log("game ended");
+}
+
+
+const restartGame = () => {
+	currentPlayer = O;
+	board.fill(null)
+	
+
 const checkline = () => {
-// //winning combination
+// //winning combination - possible ways player  can win 
 // [0, 1, 2],
 // [3, 4, 5],
 // [6, 7, 8],
@@ -37,14 +52,42 @@ const checkline = () => {
 // [2, 4, 6]
 // ]
 
+
+//check if board[0] is same as board[1]
+
 //Top Line = [0,1,2] X 
-if(currentPlayer == board[0] && board[0] == board[1] && board[0] ==board[2])
-console.log("top line winner");
+if(currentPlayer == board[0] && board[0] == board[1] && board[0] ==board[2]) 
+  		return true;
 
+//Middle Line  [3,4,5]
+if(currentPlayer == board[0] && board[0] == board[1] && board[0] ==board[2]) 
+		return true;
 
+//Bottom Line [6,7,8]
+if(currentPlayer == board[0] && board[0] == board[1] && board[0] ==board[2]) 
+		return true;
 
+//left column [0,3,6]
+if(currentPlayer == board[0] && board[0] == board[1] && board[0] ==board[2]) 
+		return true;
+//middle column [1,4,7]
+if(currentPlayer == board[0] && board[0] == board[1] && board[0] ==board[2]) 
+		return  true;
+//right column [2,5,8]
+if(currentPlayer == board[0] && board[0] == board[1] && board[0] ==board[2]) 
+		return true;
+//slash diagonal [0,4,8]
+if(currentPlayer == board[0] && board[0] == board[1] && board[0] ==board[2]) 
+		return true;
+//backslash diagonal [2,4,6]
+if(currentPlayer == board[0] && board[0] == board[1] && board[0] ==board[2]) 
+		return true;
+//If none of  these conditions are met, it will return  false
+		return false;
 };
 
+boxes.forEach(box) => box.addEventListener("click", boxClicked));
+restart.addEventListener("click", restartGame)
 
 
 
@@ -53,69 +96,7 @@ console.log("top line winner");
 
 
 
-//step 1 
-//function that allows player to start game 
-const boxes = document.querySelectorAll(".box cell")
 
-boxes.forEach((box) => box.addEventListener("click", boxClicked))
-
-
-
-
-
-
- 
-//part 
-//set up DOM
-//this will play a important role with event listeners 
-//purpose of this: use id tags from index html & save values of all game elements
-// const cell = document.getElementsByClassName("box cell");
-// const winningMessageElement = document.getElementById(".winMessage")
-// const startButton = document.getElementById(".beginGame")
-// const winningMessageTextElement = document.getElementById(".winningMessageText")
-
-//step 1 
-//function that allows player to start game 
-const startGame() {
-var id1 = document.querySelector(#td1)
-
-}
-
-//when player clicks on the cell, either a X or O should pop up
-//event listener for box
-//step 1- add target to button
-//step 2 -for loop - loop over all of cells 
-//add event listeners, so when you click a box
-
-//  const alertCell = document.getElementById(".box cell")
-//  alertCell.addEventListener('click', event => {
-//     alert("You clicked a button!")
-//  })
-//  for (let i = 0; i < alertCell.length; i++) {
-//  console.log(i);
-//  }
-
-// const cell = () => Array.from(document.getElementsByClassName("box cell"));
-// const clickFunction = (event) => console.log(event.target);
-// const emptyCells = () => grid().filter(_cell1 => _cell1.innerText === '')
-// const handleClickEvent = () => cell().forEach(_cell1 => _cell1.addEventListener("click", clickFunction))
-// const allSame = (arr) => arr.every
-
-// clickFunction();
-
-
-// // switch turns between 2 players
-// //
-// const takeTurn = (index, letter) => grid()[index].innerText = letter;
-// const opponentChoice = () => qNumId(emptyCells()[Math.floor(Math.random() * emptyCells().length)]);
-
-
-
-// // code determines who won game
-// // Create a function that checks if either player has won
-// const pickWinner = (winningSequence) => { 
-//     winningSequence.forEach(_qEl => _qEl.classList.add('winner'));
-//     disableListeners();
 
 
 
