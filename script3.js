@@ -46,18 +46,28 @@ function winner() {
         selectWinnerBoxes(box7,box8,box9);
         selectNonWinnerBoxes(box1,box2,box3,box4,box5,box6);
     }
-    
 //if condition for vertical victory conditions
-
 //the boxes selected vertically to win the game are box1, box4, box7
 if (box1.innerHTML !== "" && box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML){
     selectWinnerBoxes(box1,box4,box7);
     selectNonWinnerBoxes(box2,box3,box5,box6, box8,box9);
 }
-
-
+//the boxes selected vertically to win the game are box2, box5, box8
+if (box2.innerHTML !== "" && box2.innerHTML === box5.innerHTML && box2.innerHTML === box8.innerHTML) {
+    selectWinnerBoxes(box2,box5,box8);
+    selectNonWinnerBoxes(box1,box3,box4,box6,box7,box9);
+}
+//the boxes selected vertically to win the game are box3, box6, box9
+if (box3.innerHTML !== "" && box3.innerHTML === box6.innerHTML && box3.innerHTML === box9.innerHTML) {
+    selectWinnerBoxes(box3,box6,box9);
+    selectNonWinnerBoxes(box1,box2,box4,box5,box7,box8);
+}
 //if condition for diagonal victory conditions 
-
+//the boxes selected diagonally to win game are box1,box5,box9
+if (box1.innerHTML !== "" && box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML) {
+    selectWinnerBoxes(box1,box5,box9);
+    selectNonWinnerBoxes(box2,box3,box4,box6,box7,box8);
+}
 
 
 
