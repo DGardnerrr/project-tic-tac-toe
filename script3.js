@@ -62,15 +62,21 @@ if (box3.innerHTML !== "" && box3.innerHTML === box6.innerHTML && box3.innerHTML
     selectWinnerBoxes(box3,box6,box9);
     selectNonWinnerBoxes(box1,box2,box4,box5,box7,box8);
 }
-//if condition for diagonal victory conditions 
+//if condition for diagonal victory 
 //the boxes selected diagonally to win game are box1,box5,box9
 if (box1.innerHTML !== "" && box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML) {
     selectWinnerBoxes(box1,box5,box9);
     selectNonWinnerBoxes(box2,box3,box4,box6,box7,box8);
 }
+//the boxes selected diagnally to win are box3, box5, box7
+if (box3.innerHTML !== "" && box3.innerHTML === box5.innerHTML && box3.innerHTML === box7.innerHTML) {
+    selectWinnerBoxes(box3,box5,box7);
+    selectNonWinnerBoxes(box1,box2,box4,box6,box8,box9);
+}
+    
+}
 
-
-
+//
 
 
 
