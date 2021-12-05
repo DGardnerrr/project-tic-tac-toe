@@ -1,4 +1,7 @@
 # project-tic-tac-toe
+Description:
+This is a game called Tic Tac Toe created with html, csss, javascript
+
 Rules:
 1. one player is playing with "X", the other player is playing with "O"
 
@@ -9,6 +12,16 @@ Rules:
 4. If both players are not able to get their "X" or "O" in a row, then they both lose
 
 
+Technical requirements:
+Render a game board in the browser
+Switch turns between X and O (or whichever markers you select)
+Visually display which side won if a player gets three in a row, or show a draw if neither player wins
+Include separate HTML / CSS / JavaScript files
+Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
+Use JavaScript for DOM manipulation
+
+
+Creating User Stories served a important role in helping with the game logic
 User stories:
 1. As a player, I can play a game of tic tac toe with the other player
 
@@ -37,11 +50,11 @@ Additional steps I would have Took/Implementations:
 1. Add more bonuses to my project 
 - spending more time on my HTML - including a little more content to make game more interactive 
 
-- being more creative with user face interactions with the tic tac toe game: including 
+- being more creative with user face interactions with the tic tac toe game: including a score board, adding background music everytime a player clicks on each box, be more creative to substitute X and O with different characters that represent them
 
 
 Some of Issues Encountered:
-1. The use of DOM - not really familiar with DOM
+1. The use of DOM - not really familiar with DOM.However,was able to successfully master the concept after doing some practice, referring back to the previous lessons,recordings, labs
 
 
 

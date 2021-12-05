@@ -4,67 +4,90 @@ body {
        color: black;
    }
    
-   button {
-     width: 20%;
-     height: 10%;
-     line-height: 50px;
-   }
+  
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
    
-   .cell {
-	width: var(--cell-size);
-	height: var(--cell-size);
-	border: 1px solid black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
+.container {
+    width: 300px;
+    overflow: hidden;
+    margin: 50px auto 0 auto;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr;
+
+.container span {
     width: 100%;
-    aspect-ratio: 1/1;
-  }
-    
-  .cell:nth-of-type(even)
-{
-  background-color: white;
+    display: block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5%;
+    font-size: 2em;
 }
 
-.cell:hover
-{
-  font-size: 2rem;
-
-}
-.cell.filled
-{
-  font-size: 20;
-}
- 
-
- .grid {
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr;
-    width: 100%;
-    aspect-ratio: 1/1;
-  }
-    
-  .cell:nth-of-type(even)
-{
-  background-color: white;
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 72px;
+    text-align: center;
+    background: #808080;
+    height: 100px;
+    width: 100px;
+    float: left;
+    border: #000000 solid 1px;
+    cursor: pointer;
 }
 
-.cell:hover
-{
-  font-size: 2rem;
+.box:hover {
+    background: #8b8b54;
+}
 
+.button-container {
+    margin: 2% auto 0 auto;
+    text-align: center;
 }
-.cell.filled
-{
-  font-size: 20;
+
+button {
+    background: black;
+    color: #ffffff;
+    font-weight: bold;
+    border: #000000 solid 1px;
+    cursor: pointer;
+    width: 160px;
+    height: 40px;
+    text-align: center;
 }
- 
+
+.win {
+    background-color: #59855f; 
+    color:  #b8ffb1;
+}
+
+.win:hover {
+    background-color: #2a522f; 
+    color: #b8ffb1;
+}
+
+.loss { 
+    color: transparent;
+    background: transparent;
+    border: none;
+}
+
+.loss:hover{
+    color: transparent;
+    background: transparent;
+    border: none;
+}
+
+
+
+
   
 
  
