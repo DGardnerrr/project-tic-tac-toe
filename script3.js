@@ -24,20 +24,26 @@ for(let i = 0; i < boxes.length; i++) {
 
 
 //step - victory conditions
-//created function with if statement for the possible outcome of victory conditions
+//created function with if condition for the possible outcome of victory conditions
+
+//if condition for across victory conditions 
+//if box1, box2,and box3 are equal to eachother, there is a win 
+//the boxes selected across to win the game are box1, box2, box3 
+function winner() {
+    if (box1.innerHTML !== "" && box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML){
+        selectWinnerBoxes(box1, box2, box3);
+        selectNonWinnerBoxes(box4,box5,box6,box7,box8,box9);
+    }
 
 
 
-//across victory conditions 
+
+
+//if condition for vertical victory conditions
 
 
 
-
-//vertical victory conditions
-
-
-
-//diagonal victory conditions 
+//if condition for diagonal victory conditions 
 
 
 
