@@ -34,13 +34,26 @@ function winner() {
         selectWinnerBoxes(box1, box2, box3);
         selectNonWinnerBoxes(box4,box5,box6,box7,box8,box9);
     }
-
-
-
-
-
+    //if box4, box5,and box6 are equal to eachother, there is a win 
+//the boxes selected across to win the game are box4, box5, box6 
+    if (box4.innerHTML !== "" && box4.innerHTML === box5.innerHTML && box4.innerHTML === box6.innerHTML){
+        selectWinnerBoxes(box4,box5,box6);
+        selectNonWinnerBoxes(box1,box2,box3,box7,box8,box9);
+    }
+    //if box7, box8,and box9 are equal to eachother, there is a win 
+//the boxes selected across to win the game are box7, box8, box9
+    if (box7.innerHTML !== "" && box7.innerHTML === box8.innerHTML && box7.innerHTML === box9.innerHTML){
+        selectWinnerBoxes(box7,box8,box9);
+        selectNonWinnerBoxes(box1,box2,box3,box4,box5,box6);
+    }
+    
 //if condition for vertical victory conditions
 
+//the boxes selected vertically to win the game are box1, box4, box7
+if (box1.innerHTML !== "" && box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML){
+    selectWinnerBoxes(box1,box4,box7);
+    selectNonWinnerBoxes(box2,box3,box5,box6, box8,box9);
+}
 
 
 //if condition for diagonal victory conditions 
