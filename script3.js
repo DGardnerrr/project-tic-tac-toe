@@ -1,4 +1,4 @@
-//step - DOM selector 
+//step - DOM selector , event
 const boxes = document.getElementsByClassName('box')
 
 // step - create variables to store information for game
@@ -84,22 +84,33 @@ if (box3.innerHTML !== "" && box3.innerHTML === box5.innerHTML && box3.innerHTML
  * step - Visually display which side won if a player gets
  *  three in a row, or show a draw if neither player wins
  */
-
 //to do that, created function for winning game 
-/* when the user clicks on the button, the new class get added with 
- * the existing classes.
- * /
- 
+// when the user clicks on the button, the new class get added with  the existing classes.
+//created function to reset the game - when the button is clicked, the game is reset
 
+function selectWinnerBoxes(v1, v2, v3) {
+    v1.classList.add('win')
+    v2.classList.add('win')
+    v3.classList.add('win')
+    turn.innerHTML = `${v1.innerHTML} Won. Congrats!`
+}
 
-//created function for losing game
-/* when the user clicks on the button, the new class get added with 
- * the existing classes.
- */
- 
+function selectNonWinnerBoxes (v4, v5, v6, v7, v8, v9) {
+    v4.classList.add('loss')
+    v5.classList.add('loss')
+    v6.classList.add('loss')
+    v7.classList.add('loss')
+    v8.classList.add('loss')
+    v9.classList.add('loss')
 
-// create function to replay game 
+}
 
-
-
-
+function replay() {
+    for(let i=0; i<boxes.length; i++) {
+        boxes[i].classList.remove('win')
+        boxes[i].classList.remove('loss')
+        boxes[i].innerHTML = ''
+        X_or_O = 0
+        turn.innerHTML = 'Play'
+    }
+}

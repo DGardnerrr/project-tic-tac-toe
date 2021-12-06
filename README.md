@@ -2,6 +2,9 @@
 Description:
 This is a game called Tic Tac Toe created with html, css, javascript
 
+Technologies used:
+html, css, javascript
+
 Rules:
 1. one player is playing with "X", the other player is playing with "O"
 
