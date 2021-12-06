@@ -85,20 +85,20 @@ if (box3.innerHTML !== "" && box3.innerHTML === box5.innerHTML && box3.innerHTML
  *  three in a row, or show a draw if neither player wins
  */
 
-//create function for winning game 
+//to do that, created function for winning game 
 /* when the user clicks on the button, the new class get added with 
  * the existing classes.
  * /
  
 
 
-//create function for losing game
+//created function for losing game
 /* when the user clicks on the button, the new class get added with 
  * the existing classes.
  */
  
 
-// create function to 
+// create function to replay game 
 
 
 
