@@ -1,4 +1,4 @@
-//DOM selector 
+//step - DOM selector 
 const boxes = document.getElementsByClassName('box')
 
 // step - create variables to store information for game
@@ -48,22 +48,26 @@ function winner() {
     }
 //if condition for vertical victory conditions
 //the boxes selected vertically to win the game are box1, box4, box7
+//if box1, box4,and box7 are equal to eachother, there is a win 
 if (box1.innerHTML !== "" && box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML){
     selectWinnerBoxes(box1,box4,box7);
     selectNonWinnerBoxes(box2,box3,box5,box6, box8,box9);
 }
 //the boxes selected vertically to win the game are box2, box5, box8
+//if box2, box5,and box8 are equal to eachother, there is a win 
 if (box2.innerHTML !== "" && box2.innerHTML === box5.innerHTML && box2.innerHTML === box8.innerHTML) {
     selectWinnerBoxes(box2,box5,box8);
     selectNonWinnerBoxes(box1,box3,box4,box6,box7,box9);
 }
 //the boxes selected vertically to win the game are box3, box6, box9
+//if box3, box6,and box9 are equal to eachother, there is a win 
 if (box3.innerHTML !== "" && box3.innerHTML === box6.innerHTML && box3.innerHTML === box9.innerHTML) {
     selectWinnerBoxes(box3,box6,box9);
     selectNonWinnerBoxes(box1,box2,box4,box5,box7,box8);
 }
 //if condition for diagonal victory 
 //the boxes selected diagonally to win game are box1,box5,box9
+//if box1, box5,and box9 are equal to eachother, there is a win 
 if (box1.innerHTML !== "" && box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML) {
     selectWinnerBoxes(box1,box5,box9);
     selectNonWinnerBoxes(box2,box3,box4,box6,box7,box8);
@@ -76,7 +80,25 @@ if (box3.innerHTML !== "" && box3.innerHTML === box5.innerHTML && box3.innerHTML
     
 }
 
-//
+/*
+ * step - Visually display which side won if a player gets
+ *  three in a row, or show a draw if neither player wins
+ */
+
+//create function for winning game 
+/* when the user clicks on the button, the new class get added with 
+ * the existing classes.
+ * /
+ 
+
+
+//create function for losing game
+/* when the user clicks on the button, the new class get added with 
+ * the existing classes.
+ */
+ 
+
+// create function to 
 
 
 
