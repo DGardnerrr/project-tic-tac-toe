@@ -85,7 +85,19 @@ button {
     border: none;
 }
 
+.tie {
+    background-color: pink; 
+    color:  #b8ffb1; 
+}
 
+.tie.hover {
+    background-color: #2a522f; 
+    color: #b8ffb1;
+}
+
+.holdValues {
+    pointer-events:none;
+}
 
 
   

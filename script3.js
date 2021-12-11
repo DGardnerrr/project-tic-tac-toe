@@ -1,4 +1,4 @@
-//step - DOM selector , event
+//step - DOM selector
 const boxes = document.getElementsByClassName('box')
 
 // step - create variables to store information for game
@@ -13,11 +13,13 @@ for(let i = 0; i < boxes.length; i++) {
             this.innerHTML='X'
             winner()
             X_or_O+=1
+            boxes[i].classList.add("holdValues"); 
         }
         else {
             this.innerHTML='O'
             winner()
             X_or_O+=1
+            boxes[i].classList.add("holdValues"); 
         }
     }
 }
@@ -77,7 +79,19 @@ if (box3.innerHTML !== "" && box3.innerHTML === box5.innerHTML && box3.innerHTML
     selectWinnerBoxes(box3,box5,box7);
     selectNonWinnerBoxes(box1,box2,box4,box6,box8,box9);
 }
-    
+ //created condition for the tie
+if (box1.innerHTML !== "" && 
+    box2.innerHTML !== "" && 
+    box3.innerHTML !== "" && 
+    box4.innerHTML !==""  &&
+    box5.innerHTML !==""  &&
+    box6.innerHTML !==""  &&
+    box7.innerHTML !==""  &&
+    box8.innerHTML !==""  &&
+    box9.innerHTML !=="" ) {
+
+selectTieBoxes(box1,box2,box3,box4,box5,box6,box7,box8,box9);
+}
 }
 
 /*
@@ -105,10 +119,25 @@ function selectNonWinnerBoxes (v4, v5, v6, v7, v8, v9) {
 
 }
 
+function selectTieBoxes(v1,v2,v3, v4, v5, v6, v7, v8, v9) {
+    v1.classList.add('tie')
+    v2.classList.add('tie')
+    v3.classList.add('tie')
+    v4.classList.add('tie')
+    v5.classList.add('tie')
+    v6.classList.add('tie')
+    v7.classList.add('tie')
+    v8.classList.add('tie')
+    v9.classList.add('tie')
+    turn.innerHTML = `${v1.innerHTML} There was a tie!`
+}
+
+
 function replay() {
     for(let i=0; i<boxes.length; i++) {
         boxes[i].classList.remove('win')
         boxes[i].classList.remove('loss')
+        boxes[i].classList.remove('tie')
         boxes[i].innerHTML = ''
         X_or_O = 0
         turn.innerHTML = 'Play'
