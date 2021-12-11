@@ -139,6 +139,7 @@ function replay() {
         boxes[i].classList.remove('loss')
         boxes[i].classList.remove('tie')
         boxes[i].innerHTML = ''
+        boxes[i].classList.remove("holdValues"); 
         X_or_O = 0
         turn.innerHTML = 'Play'
     }
