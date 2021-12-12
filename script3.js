@@ -101,7 +101,7 @@ selectTieBoxes(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 //to do that, created function for winning game 
 // when the user clicks on the button, the new class get added with  the existing classes.
 //created function to reset the game - when the button is clicked, the game is reset
-
+//created function for tie 
 function selectWinnerBoxes(v1, v2, v3) {
     v1.classList.add('win')
     v2.classList.add('win')
@@ -129,7 +129,7 @@ function selectTieBoxes(v1,v2,v3, v4, v5, v6, v7, v8, v9) {
     v7.classList.add('tie')
     v8.classList.add('tie')
     v9.classList.add('tie')
-    turn.innerHTML = `${v1.innerHTML} There was a tie!`
+    turn.innerHTML = `${v1.innerHTML} Yikes There was a tie!`
 }
 
 

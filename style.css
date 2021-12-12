@@ -86,17 +86,17 @@ button {
 }
 
 .tie {
-    background-color: transparent; 
+    background-color: #59855f; 
     color:  #b8ffb1; 
 }
 
 .tie.hover {
-    background-color: transparent; 
+    background-color: #59855f; 
     color: #b8ffb1;
 }
 
 .holdValues {
-    pointer-events:none;
+    pointer-events:none;  
 }
 
 
