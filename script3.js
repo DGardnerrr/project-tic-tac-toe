@@ -129,7 +129,7 @@ function selectTieBoxes(v1,v2,v3, v4, v5, v6, v7, v8, v9) {
     v7.classList.add('tie')
     v8.classList.add('tie')
     v9.classList.add('tie')
-    turn.innerHTML = `${v1.innerHTML} Yikes There was a tie!`
+    turn.innerHTML = `Yikes There was a tie!`
 }
 
 
