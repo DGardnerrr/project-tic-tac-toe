@@ -56,8 +56,6 @@ Additional steps I would have Took/Implementations:
 - being more creative with user face interactions with the tic tac toe game: including a score board, adding background sound everytime a player clicks on each box, be more creative to substitute X and O with different characters that represent them
 
 
-Some of Issues Encountered:
-1. The use of DOM - not really familiar with DOM.However,was able to successfully master the concept after doing some practice, referring back to the previous lessons,recordings, labs
 
 
 
